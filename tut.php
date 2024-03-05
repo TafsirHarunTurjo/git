@@ -10,21 +10,25 @@
 <body>
 
     <!-- <form action="tut.php" method="post">
-
-        <input type="checkbox" name="movies[]" value="Shawshank Redamptions">
-        <label for="movies[]"> Shawshank Redamptions</label><br>
-        <input type="submit" value="Submit" />
-    </form> -->
-    <br>
+        <input type="number" name="number1" placeholder="Enter first number">
+        <br>
+        <input type="number" name="number2" placeholder="Enter second number">
+        <br>
+        <input type="submit" value="Calculate Sum" />
+    </form>
+    <br> -->
 
     <?php
-        function firstFunction($name, $age, $gender){
-            echo    "hello $name you are $age and you are $gender<br>";
+    function cube($number1)
+    {
+        return $number1*$number1*$number1;
+        
         }
-          firstFunction("Tafsir", 29, "male");
-          firstFunction("Ridi", 29, "female");
-          firstFunction("Fatima", 29, "gay");
-
+        
+            $result = cube(9);
+            echo "$result<br>";
+            echo cube(9);
+   
     ?>
 
 
