@@ -1,36 +1,34 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-<form action="tut.php" method="get">
-        <label for="color">Color:</label><br>
-        <input type="text" name="color" /> <br>
-        <label for="pluralnoun">Plural Noun:</label><br>
-        <input type="text" name="pluralnoun" /><br> 
-        <label for="celebrity">Celebrity:</label><br>
-        <input type="text" name="celebrity" /> <br> <br> 
-        <input type="submit" value="Submit" /> 
-</form>
-<br>
+    <!-- <form action="tut.php" method="post">
 
- <?php  $color = $_GET["color"];
-        $pluralNoun = $_GET["pluralnoun"];
-        $celebrity = $_GET["celebrity"];    
-        echo "Roses are $color<br>";
-        echo "$pluralNounare blue<br>";
-        echo "i love $celebrity<br>";
-?>      
+        <input type="checkbox" name="movies[]" value="Shawshank Redamptions">
+        <label for="movies[]"> Shawshank Redamptions</label><br>
+        <input type="submit" value="Submit" />
+    </form> -->
+    <br>
+
+    <?php
+        function firstFunction($name, $age, $gender){
+            echo    "hello $name you are $age and you are $gender<br>";
+        }
+          firstFunction("Tafsir", 29, "male");
+          firstFunction("Ridi", 29, "female");
+          firstFunction("Fatima", 29, "gay");
+
+    ?>
 
 
 
 </body>
+
 </html>
