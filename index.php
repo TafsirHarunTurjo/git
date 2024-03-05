@@ -5,11 +5,11 @@ $age = 29;
 $higt = 6.3;
 $can_vote = true;
 $add = array(
-    'City' => 'Dhaka',
+    'City' => 'Dhaka',  
     'Post office' => 'Jitgatola'
 );
 define('pi', 3.1416);
-?>
+?>  
 
 
 <!DOCTYPE html>

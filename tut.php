@@ -11,24 +11,24 @@
 </head>
 <body>
 
-<form action="tut.php" method="post">
-        
-        <input type="text" name="student" /><br>
-        
-        <!-- <input type="text" name="num_1" /><br>
-       
-        <input type="text" name="num_2" /><br> -->
+<form action="tut.php" method="get">
+        <label for="color">Color:</label><br>
+        <input type="text" name="color" /> <br>
+        <label for="pluralnoun">Plural Noun:</label><br>
+        <input type="text" name="pluralnoun" /><br> 
+        <label for="celebrity">Celebrity:</label><br>
+        <input type="text" name="celebrity" /> <br> <br> 
+        <input type="submit" value="Submit" /> 
+</form>
+<br>
 
-        <input type="submit" value="Submit" />
-    </form>
-
-<?php
-    $grades = array("Turjo" =>"A+", "Rain"=> "B", "Tahmid"=>"B+", "Pulock"=>"C-");
-    echo $grades[$_POST["student"]];
-   
-
-
-?>
+ <?php  $color = $_GET["color"];
+        $pluralNoun = $_GET["pluralnoun"];
+        $celebrity = $_GET["celebrity"];    
+        echo "Roses are $color<br>";
+        echo "$pluralNounare blue<br>";
+        echo "i love $celebrity<br>";
+?>      
 
 
 
