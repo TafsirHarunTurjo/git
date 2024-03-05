@@ -19,16 +19,10 @@
     <br> -->
 
     <?php
-    function cube($number1)
-    {
-        return $number1*$number1*$number1;
-        
-        }
-        
-            $result = cube(9);
-            echo "$result<br>";
-            echo cube(9);
-   
+    if (5 > 3) {
+        echo "Have a good day!";
+    }
+
     ?>
 
 
