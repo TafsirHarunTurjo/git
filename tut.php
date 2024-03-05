@@ -20,9 +20,25 @@
 
     <?php
     if (5 > 3) {
-        echo "Have a good day!";
+        echo "Have a good day!<br>";
     }
+    $t = 14;
 
+    if ($t < 20) {
+        echo "Have a good day!<br>";
+    }
+    $t = 14;
+
+    if ($t == 14) {
+        echo "Have a good day!<br>";
+    }
+    $a = 200;
+    $b = 33;
+    $c = 500;
+
+    if ($a > $b && $c < $a) {
+        echo "Both conditions are true";
+    }
     ?>
 
 
