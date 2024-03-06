@@ -19,26 +19,21 @@
     <br> -->
 
     <?php
-    if (5 > 3) {
-        echo "Have a good day!<br>";
-    }
-    $t = 14;
 
-    if ($t < 20) {
-        echo "Have a good day!<br>";
-    }
-    $t = 14;
+    function getMax($num1, $num2, $num3)
+    {
+        if ($num1 >= $num2 && $num1 >= $num3) {
+            return $num1;
+        } elseif ($num2 >= $num3) {
+            return $num2;
+        } else {
+            return $num3;
+        }
+    };
 
-    if ($t == 14) {
-        echo "Have a good day!<br>";
-    }
-    $a = 200;
-    $b = 33;
-    $c = 500;
+    echo getMax(9, 231712, 1);
 
-    if ($a > $b && $c < $a) {
-        echo "Both conditions are true";
-    }
+
     ?>
 
 
