@@ -39,7 +39,7 @@ Last Input <input type="text" name="li"><br><br> <br> <br><br>
         echo $fi%$li;
     }
     else{
-        echo "invalid op";
+        echo "invalid operator";
     }
 
     ?>
