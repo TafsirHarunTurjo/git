@@ -9,30 +9,38 @@
 
 <body>
 
-    <!-- <form action="tut.php" method="post">
-        <input type="number" name="number1" placeholder="Enter first number">
-        <br>
-        <input type="number" name="number2" placeholder="Enter second number">
-        <br>
-        <input type="submit" value="Calculate Sum" />
-    </form>
-    <br> -->
+<form action="tut.php" method="POST">
+First Input <input type="text" name="fi"><br>
+Operator <input type="text" name="op"><br>
+Last Input <input type="text" name="li"><br><br> <br> <br><br>
+<input type="submit">
+</form>         
+    <br>
 
     <?php
 
-    function getMax($num1, $num2, $num3)
-    {
-        if ($num1 >= $num2 && $num1 >= $num3) {
-            return $num1;
-        } elseif ($num2 >= $num3) {
-            return $num2;
-        } else {
-            return $num3;
-        }
-    };
+    $fi= $_POST["fi"];
+    $li= $_POST["li"];
+    $op= $_POST["op"];
 
-    echo getMax(9, 231712, 1);
-
+    if($op=="+"){
+        echo $fi+$li;
+    }
+    elseif($op=="-"){
+        echo $fi-$li;
+    }
+    elseif($op=="*"){
+        echo $fi*$li;
+    }
+    elseif($op=="/"){
+        echo $fi/$li;
+    }
+    elseif($op=="%"){
+        echo $fi%$li;
+    }
+    else{
+        echo "invalid op";
+    }
 
     ?>
 
