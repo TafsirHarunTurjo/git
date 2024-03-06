@@ -10,9 +10,9 @@
 <body>
 
 <form action="tut.php" method="POST">
-First Input <input type="text" name="fi"><br>
+First Input <input type="number" step="0.001" name="fi"><br>
 Operator <input type="text" name="op"><br>
-Last Input <input type="text" name="li"><br><br> <br> <br><br>
+Last Input <input type="number" step="0.001"name="li"><br><br> <br> <br><br>
 <input type="submit">
 </form>         
     <br>
