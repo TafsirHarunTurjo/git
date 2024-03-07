@@ -9,43 +9,22 @@
 
 <body>
 
-<form action="tut.php" method="POST">
-First Input <input type="number" step="0.001" name="fi"><br>
-Operator <input type="text" name="op"><br>
-Last Input <input type="number" step="0.001"name="li"><br><br> <br> <br><br>
-<input type="submit">
-</form>         
+    <!-- <form action="tut.php" method="POST">
+        What is your Grade?
+        <br><input type="text" name="grade"><br>
+
+        <input type="submit">
+    </form> -->
     <br>
+    <<?php
+        $numbers =array(10,12,33,44,55,66);
+        for($n=0; $n<=count($numbers); $n++){
+            echo "$numbers[$n] <br>";
 
-    <?php
+        }
 
-    $fi= $_POST["fi"];
-    $li= $_POST["li"];
-    $op= $_POST["op"];
-
-    if($op=="+"){
-        echo $fi+$li;
-    }
-    elseif($op=="-"){
-        echo $fi-$li;
-    }
-    elseif($op=="*"){
-        echo $fi*$li;
-    }
-    elseif($op=="/"){
-        echo $fi/$li;
-    }
-    elseif($op=="%"){
-        echo $fi%$li;
-    }
-    else{
-        echo "invalid op";
-    }
-
-    ?>
-
-
-
-</body>
+        
+        ?> 
+        </body>
 
 </html>
