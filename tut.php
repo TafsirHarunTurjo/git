@@ -18,40 +18,35 @@
     <br>
     <?php include "head.html"?>
 
-
-
-    <form action="tut.php" method="POST">
-First Input <input type="text" name="fi"><br>
-Operator <input type="text" name="op"><br>
-Last Input <input type="text" name="li"><br><br> <br> <br><br>
-<input type="submit">
-</form>         
-    <br>
-
     <?php
+        class Student{
 
-    $fi= $_POST["fi"];
-    $li= $_POST["li"];
-    $op= $_POST["op"];
+            var $name;
+            var $major;
+            var $gpa;
 
-    if($op=="+"){
-        echo $fi+$li;
-    }
-    elseif($op=="-"){
-        echo $fi-$li;
-    }
-    elseif($op=="*"){
-        echo $fi*$li;
-    }
-    elseif($op=="/"){
-        echo $fi/$li;
-    }
-    elseif($op=="%"){
-        echo $fi%$li;
-    }
-    else{
-        echo "invalid op";
-    }
+
+            function __construct($aName,$aMajor,$aGpa)
+            {
+                $this->name=$aName;
+                $this->major=$aMajor;
+                $this->gpa=$aGpa;
+            }
+            function hasHonors(){
+                if ($this->gpa>=3.5){
+                    return "true";
+                }
+                else{
+                    return "false";
+                }
+            }
+        }
+    
+        $student1 = new Student("Harry Potter","bba",2.8);
+        $student2 = new Student("LOD","eee",3.7);
+        
+        echo $student1 -> hasHonors();
+      
 
     ?>
     
