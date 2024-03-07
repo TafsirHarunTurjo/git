@@ -13,7 +13,7 @@
       <input type ="number" name="number2"><br><br>
       <input type ="submit" value="Calculate"/>  
       </form>
-      <label for="result">Result</label><br> <?php echo $_GET["number1"] + $_GET["number2"];?>
+      Result =<label for="result">Result</label><br> <?php echo $_GET["number1"] + $_GET["number2"];?> 
            
           
               
