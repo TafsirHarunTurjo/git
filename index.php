@@ -1,83 +1,66 @@
-<?php
-$f_name = "Tafsir";
-$l_namne = "Turjo";
-$age = 29;
-$higt = 6.3;
-$can_vote = true;
-$add = array(
-    'City' => 'Dhaka',  
-    'Post office' => 'Jitgatola'
-);
-define('pi', 3.1416);
-?>  
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 </head>
 
 <body>
-    <?php
-    $friends = array("amit", "nishan", "dog", "tutun", "kire");
-    $friends[3] = "Tutun";
-    echo count($friends);
 
-    ?>
-    <form action="index.php" method="post">
-        Password: <input type="password" name="password"><br>
-        Apples :<input type="checkbox" name ="fruits[]" value ="apples"><br>
-        Oranges :<input type="checkbox" name ="fruits[]" value ="apples"><br>
-        Banana :<input type="checkbox" name ="fruits[]" value ="apples"><br>
-        
-        <input type="submit">
-    </form>
-    <br><br>
+    <h1>Recommended Books</h1>
+
     <?php
-    // echo $_POST["password"];
-    $fruits = $_POST["fruits"];
-    echo $_POST["fruits"];
-    ?>
-    <p>Name : <?php echo strtoupper("$f_name . '  ' . $l_name")  ?></p>
-    <form action="index.php" method="get">
-        <label>Your State : </label>
-        <input type="text" name="state" /><br>
-        <label>Number 1 : </label>
-        <input type="text" name="num_1" /><br>
-        <label>Number 2 : </label>
-        <input type="text" name="num_2" /><br>
-        <input type="submit" value="Submit" />
-    </form>
-    <?php
-    if (isset($_GET) && array_key_exists('state', $_GET)) {
-        $state = $_GET['state'];
-        if (isset($state) && !empty($state)) {
-            echo strtoupper('<h1>You live in</h1> ' . $state . '<br>');
-            echo strtoupper("$f_name <h1>lives in</h1> $state <br>");
-        }
-        if (count($_GET) >= 3) {
-            $num_1 = $_GET['num_1'];
-            $num_2 = $_GET['num_2'];
-            echo strtoupper("$num_1 + $num_2 = " . ($num_1 + $num_2) . "<br>");
-            echo "<hr>";
-            echo strtoupper("$num_1 - $num_2 = " . ($num_1 - $num_2) . "<br>");
-            echo "<hr>";
-            echo strtoupper("$num_1 * $num_2 = " . ($num_1 * $num_2) . "<br>");
-            echo "<hr>";
-            echo strtoupper("$num_1 / $num_2 = " . ($num_1 / $num_2) . "<br>");
-            echo "<hr>";
-            echo strtoupper("$num_1 % $num_2 = " . ($num_1 % $num_2) . "<br>");
-            echo "<hr>";
-            echo strtoupper("$num_1 / $num_2 = " . intdiv($num_1 + $num_2, $divisor) . "<br>");
-            echo "<hr>";
-        }
+    $books = [
+        [
+            "name" => "Do Androids Dream of Electric Sheep?",
+            "author" => "Philip K. Dick",
+            "buyUrl" => "http://www.example.com",
+            "year" => 1968
+        ],
+        [
+            "name" => "To Kill a Mockingbird",
+            "author" => "Harper Lee",
+            "buyUrl" => "http://www.example.com",
+            "year" => 1960
+        ],
+        [
+            "name" => "1984",
+            "author" => "George Orwell",
+            "buyUrl" => "http://www.example.com",
+            "year" => 1949
+        ],
+        [
+            "name" => "The Great Gatsby",
+            "author" => "F. Scott Fitzgerald",
+            "buyUrl" => "http://www.example.com",
+            "year" => 1925
+        ]
+    ];
+
+
+    function filterByAuthor() {
+        return "Zitis";
     }
-
+    
+    filterByAuthor();
     ?>
+    <ul>
+        <?php foreach ($books as $book) : ?>
+               
+                        <li>
+                <a href="<?= $book['buyUrl'] ?>">
+                    <?= $book['name'] ?><br>
+                    (<?= $book['year'] ?>)<br>
+                    <?= $book['author'] ?><br>
+                </a>
+            </li>
+            
+        <?php endforeach ?>
+    </ul>
+    
+
 </body>
 
 </html>
